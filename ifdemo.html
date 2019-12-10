@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="lin" name="star" v-model="name"/>林书豪
+        <input type="radio" value="zhu" name="star" v-model="name"/>注意龙
+        <input type="radio" value="qiao" name="star" v-model="name"/>乔碧落殿下
+        <img v-if="name=='lin'" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575976727821&di=ce062fed7c1e972882dd49697c9a3fcb&imgtype=0&src=http%3A%2F%2Fwww.people.com.cn%2Fmediafile%2Fpic%2F20160510%2F93%2F10675684828577708013.jpg" />
+        <img v-else-if="name=='zhu'" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977966431&di=f6bf87139248610b7554fab6c4d5a212&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201806%2F16%2F20180616161659_Mtmsu.jpeg"/>
+        <img  v-else-if="name=='qiao'" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575978034933&di=092be01bd3923102a038a6b666fe6d94&imgtype=0&src=http%3A%2F%2Fx0.ifengimg.com%2Fres%2F2019%2F5C97BA160AF3A926505184ADCE75C2DF43A65068_size205_w718_h479.png" />
+        <img v-else src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575978128744&di=8e426d77fecc69cadc1157160644f712&imgtype=0&src=http%3A%2F%2Fnews.youth.cn%2Fwztt%2F201606%2FW020160624356042567409.png"/>
+    </div>
+    <script>
+      var app = new Vue({
+          el:"#app",
+          data:{
+              show:'false',
+              name:""
+          }
+      });
+    
+    </script>
+</body>
+</html>
